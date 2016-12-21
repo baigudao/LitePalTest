@@ -1,13 +1,25 @@
 package com.jackie.litepaltest.entity;
 
+import org.litepal.crud.DataSupport;
+
 /**
  * Created by Administrator on 2016/12/21.
  */
-public class Comment {
+public class Comment extends DataSupport {
 
     private int id;
 
     private String content;
+
+    private News news;
+
+    public News getNews() {
+        return news;
+    }
+
+    public void setNews(News news) {
+        this.news = news;
+    }
 
     public int getId() {
         return id;

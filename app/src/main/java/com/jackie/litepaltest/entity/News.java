@@ -1,11 +1,15 @@
 package com.jackie.litepaltest.entity;
 
+import org.litepal.crud.DataSupport;
+
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Administrator on 2016/12/21.
  */
-public class News {
+public class News extends DataSupport {
 
     private int id;
 
@@ -17,6 +21,37 @@ public class News {
 
     private int commentCount;
 
+    private Introduction introduction;
+
+    private List<Comment> commentList = new ArrayList<Comment>();
+
+
+    private List<Category> categoryList = new ArrayList<Category>();
+
+
+    public List<Category> getCategoryList() {
+        return categoryList;
+    }
+
+    public void setCategoryList(List<Category> categoryList) {
+        this.categoryList = categoryList;
+    }
+
+    public List<Comment> getCommentList() {
+        return commentList;
+    }
+
+    public void setCommentList(List<Comment> commentList) {
+        this.commentList = commentList;
+    }
+
+    public Introduction getIntroduction() {
+        return introduction;
+    }
+
+    public void setIntroduction(Introduction introduction) {
+        this.introduction = introduction;
+    }
 
     public int getId() {
         return id;
